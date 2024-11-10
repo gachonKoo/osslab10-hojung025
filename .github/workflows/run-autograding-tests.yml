@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: Run Autograding Tests
+=======
+name: Auto Grading
+>>>>>>> dc3cfd0296e773547e789db53c43981184f230d8
 
 on:
   push:
@@ -7,6 +11,7 @@ on:
 
 jobs:
   autograding:
+<<<<<<< HEAD
     runs-on: ubuntu-latest
 
     steps:
@@ -26,3 +31,19 @@ jobs:
       - name: Run Python script
         run: |
           python divisors.py
+=======
+    runs-on: ubuntu-latest  # GitHub Actions는 Ubuntu 환경에서 실행
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # 코드 체크아웃
+
+      - name: Run Python script
+        run: |
+          python3 divisors.py  # divisors.py 파일을 실행하여 결과를 확인
+
+      - name: Autograding
+        run: |
+          # 자동 채점 코드 추가 (필요한 경우)
+          echo "Autograding completed"
+>>>>>>> dc3cfd0296e773547e789db53c43981184f230d8
